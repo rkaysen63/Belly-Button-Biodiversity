@@ -1,0 +1,11 @@
+.jumbotron {
+    background-image: url(https://www.cedars-sinai.org/content/dam/cedars-sinai/blog/2020/06/viruses-bacteria-fungi.jpg);
+    /* background-size: 100% 100%; */
+    background-size: "cover";
+    text-align: center;
+    color: white
+}
+
+body {
+    background-color:lightcyan
+}

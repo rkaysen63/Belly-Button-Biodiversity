@@ -103,7 +103,7 @@ function buildCharts(sample) {
     // D1-7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
     //  so the otu_ids with the most bacteria are last. 
-    var first10otuIds = otuIds.slice(0, 10).map(x => "OTU " + x).reverse();
+    var first10otuIds = otuIds.slice(0, 10).map(x => "OTU " + x + " ").reverse();
     var first10sampleValues = sampleValues.slice(0, 10).reverse();
     var first10otuLabels = otuLabels.slice(0, 10).reverse();
     
@@ -124,8 +124,12 @@ function buildCharts(sample) {
     var barLayout = {
       title: "Top 10 Bacteria Cultures Found"
     };
+
+    // D4.  Make chart responsive
+    var barconfig = {responsive: true};
+
     // D1-10. Use Plotly to plot the data with the layout. 
-    Plotly.newPlot("bar", barData, barLayout);
+    Plotly.newPlot("bar", barData, barLayout, barconfig);
 
     // Bar and Bubble charts
     // D2-1. Create the trace for the bubble chart.
@@ -135,23 +139,25 @@ function buildCharts(sample) {
       type: "scatter",
       mode: "markers",
       hovertext: otuLabels,
-      // marker: {size=sampleValues,
-        // sizemode="area",
+      marker: {
+        // size: [sampleValues]}
+        // sizemode="area"
         // sizeref=2.0*max(sampleValues)/(40.0**2),
         // sizemin=4
-        // color=[otuIds], 
-        // colorscale=(0,"blue"),(1,"red")}  
+        color: [otuIds], 
+        colorscale: [(0,"blue"),(1,"red")]}  
       }];
 
     // D2-2. Create the layout for the bubble chart.
     var bubbleLayout = {
       title: "Bacteria Cultures Per Sample",
       xaxis: {title: "OTU ID"},
+      showlegend: true,
       margin: {
-        l: 100,
-        r: 100,
-        t: 100,
-        b: 100
+        l: 50,
+        r: 50,
+        t: 50,
+        b: 50
       },
       hovermode: "closest"
     };
@@ -165,26 +171,26 @@ function buildCharts(sample) {
       mode: "gauge+number",
       value: washingFreq,
       title: {text: "Belly Button Washing Frequency",
-      font:{size:24}|"Scrubs per Week", font:{size: 16}},
+      font:{size:36}|"Scrubs per Week", font:{size: 16}},
       gauge:{
         axis: {range: [null, 10], tickwidth: 2, tickcolor: "black"},
-        bar: {color: "dimgray"},
+        bar: {color: "lightcyan"},
         // bgcolor:
         borderwidth: 2,
         bordercolor: "darkslategrey",
         steps: [
-          {range: [0, 2], color: "hotpink"},
-          {range: [2, 4], color: "coral"},
-          {range: [4, 6], color: "khaki"},
-          {range: [6, 8], color: "mediumspringgreen"},
-          {range: [8, 10], color: "deepskyblue"}]     
+          {range: [0, 2], color: "darkcyan"},
+          {range: [2, 4], color: "rebeccapurple"},
+          {range: [4, 6], color: "cornflowerblue"},
+          {range: [6, 8], color: "mediumseagreen"},
+          {range: [8, 10], color: "midnightblue"}]     
       }
     }];
     
     // D3-5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      width: 500,
-      height: 400,
+      width: 450,
+      height: 360,
       margin: {
         t: 25,
         r: 25,

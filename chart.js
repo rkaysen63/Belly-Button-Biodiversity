@@ -122,7 +122,7 @@ function buildCharts(sample) {
 
     // D1-9. Create the layout for the bar chart. 
     var barLayout = {
-      title: "Top 10 Bacteria Cultures Found"
+      title: "<b>Top 10 Bacteria Cultures Found</b>"
     };
 
     // D4.  Make bar chart responsive
@@ -136,18 +136,19 @@ function buildCharts(sample) {
     var bubbleData = [{
       x: otuIds,
       y: sampleValues,
-      // type: "bubble",
+      type: "scatter",
       mode: "markers",
       hovertext: otuLabels,
       marker: {
         size: sampleValues,
+        // sizemode: "area",
         color: otuIds,
         colorscale: "Earth"}  
     }];
 
     // D2-2. Create the layout for the bubble chart.
     var bubbleLayout = {
-      title: "Bacteria Cultures Per Sample",
+      title: "<b>Bacteria Cultures Per Sample</b>",
       xaxis: {title: "OTU ID"},
       showlegend: false,
       margin: {
@@ -173,16 +174,16 @@ function buildCharts(sample) {
       title: {text: "<b>Belly Button Washing Frequency</b><br>Scrubs per Week"},
       gauge:{
         axis: {range: [null, 10], tickwidth: 2, tickcolor: "black"},
-        bar: {color: "lightcyan"},
+        bar: {color: "midnightblue"},
         // bgcolor:
         borderwidth: 2,
         bordercolor: "darkslategrey",
         steps: [
-          {range: [0, 2], color: "darkcyan"},
-          {range: [2, 4], color: "rebeccapurple"},
-          {range: [4, 6], color: "cornflowerblue"},
-          {range: [6, 8], color: "mediumseagreen"},
-          {range: [8, 10], color: "midnightblue"}]     
+          {range: [0, 2], color: "EFE2CC"},
+          {range: [2, 4], color: "greenyellow"},
+          {range: [4, 6], color: "tan"},
+          {range: [6, 8], color: "paleturquoise"},
+          {range: [8, 10], color: "mediumaquamarine"}]     
       }
     }];
     

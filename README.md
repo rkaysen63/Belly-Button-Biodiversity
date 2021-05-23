@@ -16,4 +16,4 @@ There are many different types of bacteria that can be found on the body and tha
     
 “Bacteria Cultures per Sample” shows all the bacteria cultures found on the selected test subject.  Each marker represents a different culture.  Hover over the marker to discover its OTU ID No., value, and species name.  The size of the marker is relative to the value.  
    
-This dashboard allows the user to select a test subject and view the test subjects demographic information and visualize through the charts provided how much of each type of bacteria can be found in the users belly button.
+This dashboard allows the user to select an anonymous test subject, view the test subject's demographic information, see how often the test subject washes his or her belly button, and visualize through the bar and bubble charts how many different bacterias and how much of each are living in the test subject's belly button.

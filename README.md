@@ -14,4 +14,6 @@ There are many different types of bacteria that can be found on the body and tha
     
 “Belly Button Washing Frequency” is a gauge chart to visualize number of times per week that the test subject washes their belly button.
     
-“Bacteria Cultures per Sample” shows all the bacteria cultures found on the selected test subject.  Each marker represents a different culture.  Hover over the marker to discover its OTU ID No., value, and species name.  The size of the marker is relative to the value.
+“Bacteria Cultures per Sample” shows all the bacteria cultures found on the selected test subject.  Each marker represents a different culture.  Hover over the marker to discover its OTU ID No., value, and species name.  The size of the marker is relative to the value.  
+   
+This dashboard allows the user to select a test subject and view the test subjects demographic information and visualize through the charts provided how much of each type of bacteria can be found in the users belly button.
